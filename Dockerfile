@@ -1,11 +1,11 @@
-FROM continuumio/anaconda3
+FROM pytorch/pytorch
 
 LABEL maintainer="TRIUMF capstone" \
       description="Capstone runtime environement - base"
       
 # Install pytorch
-RUN conda install pytorch=0.4.1 cuda90 -c pytorch
-RUN pip install torchvision
+RUN pip3 install https://download.pytorch.org/whl/cu100/torch-1.0.1.post2-cp36-cp36m-linux_x86_64.whl
+RUN pip3 install torchvision
 
 # Install tensorflow 
-RUN conda install -c conda-forge tensorflow 
+# RUN pip install -c conda-forge tensorflow 
