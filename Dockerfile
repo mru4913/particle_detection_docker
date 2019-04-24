@@ -4,7 +4,7 @@ LABEL maintainer="TRIUMF capstone" \
       description="Capstone runtime environement - base"
       
 # Install pytorch
-RUN pip install http://download.pytorch.org/whl/cpu/torch-${PYTORCH_VERSION}-cp27-cp27mu-linux_x86_64.whl
+RUN pip install https://download.pytorch.org/whl/cu80/torch-0.4.1-cp36-cp36m-linux_x86_64.whl
 RUN pip install torchvision
 
 # Install tensorflow 
