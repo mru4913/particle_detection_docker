@@ -20,7 +20,7 @@ RUN pip install torchvision
 
 # Install tensorflow and keras
 RUN conda install -c conda-forge tensorflow
-RUN pip install -y keras
+RUN pip install keras
 
 # Install HDF5 Python bindings
 RUN conda install -y h5py=2.8.0 \
@@ -39,7 +39,7 @@ RUN conda install -y pandas\
  && conda clean -ya
  
 # Install jupyter notebook 
-RUN pip install -y jupyter
+RUN pip install jupyter
 
 # Set the container working directory to the user home folder
 WORKDIR /home/jupyter
