@@ -6,7 +6,7 @@ LABEL maintainer="TRIUMF capstone" \
 # ===============tools=============== # 
 # Run a system update to get it up to speed
 # Then install less
-RUN apt-get update && apt-get install less
+# RUN apt-get update && apt-get install less
 
       
 # ===============Packages=============== # 
