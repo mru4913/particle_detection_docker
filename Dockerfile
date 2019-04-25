@@ -38,6 +38,10 @@ RUN pip install torchnet==0.0.4
 RUN conda install -y pandas\
  && conda clean -ya
  
+ # Install sklearn
+ RUN conda install -y scikit-learn\
+ && conda clean -ya
+ 
 # Install jupyter notebook 
 RUN pip install jupyter
 
