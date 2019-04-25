@@ -19,7 +19,7 @@ RUN conda install seaborn \
 RUN pip install torchvision
 
 # Install tensorflow and keras
-RUN pip install -c conda-forge tensorflow 
+RUN conda install -c conda-forge tensorflow
 RUN pip install -y keras
 
 # Install HDF5 Python bindings
