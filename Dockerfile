@@ -42,6 +42,10 @@ RUN conda install -y pandas\
  RUN conda install -y scikit-learn\
  && conda clean -ya
  
+ # Install XGBoost
+ RUN conda install -y -c conda-forge xgboost \
+  && conda clean -ya
+ 
 # Install jupyter notebook 
 RUN pip install jupyter
 
