@@ -45,6 +45,10 @@ RUN conda install -y pandas\
  # Install XGBoost
  RUN conda install -y -c conda-forge xgboost \
   && conda clean -ya
+  
+ # Install lightbgm
+ RUN conda install -y -c conda-forge lightgbm \
+  && conda clean -ya
  
 # Install jupyter notebook 
 RUN pip install jupyter
