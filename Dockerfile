@@ -49,6 +49,9 @@ RUN conda install -y pandas\
  # Install lightbgm
  RUN conda install -y -c conda-forge lightgbm \
   && conda clean -ya
+  
+ # Install catboost 
+ RUN pip install catboost
  
 # Install jupyter notebook 
 RUN pip install jupyter
