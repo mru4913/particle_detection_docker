@@ -5,10 +5,10 @@ LABEL maintainer="TRIUMF capstone" \
       
 # ===============tools=============== # 
 # Run a system update to get it up to speed
-# Then install less
 # RUN apt-get update && apt-get install less
+RUN apt-get update && apt-get install vim -y &&
+ apt-get install nmap -y && apt-get install nano -y
 
-      
 # ===============Packages=============== # 
 # Install graph tool 
 RUN pip install -U matplotlib
@@ -38,20 +38,23 @@ RUN pip install torchnet==0.0.4
 RUN conda install -y pandas\
  && conda clean -ya
  
- # Install sklearn
- RUN conda install -y scikit-learn\
+# Install sklearn
+RUN conda install -y scikit-learn\
  && conda clean -ya
  
  # Install XGBoost
- RUN conda install -y -c conda-forge xgboost \
+RUN conda install -y -c conda-forge xgboost \
   && conda clean -ya
   
- # Install lightbgm
- RUN conda install -y -c conda-forge lightgbm \
+# Install lightbgm
+RUN conda install -y -c conda-forge lightgbm \
   && conda clean -ya
   
- # Install catboost 
- RUN pip install catboost
+# Install catboost 
+RUN pip install catboost
+
+# Install snakemake 
+RUN pip install snakemake
  
 # Install jupyter notebook 
 RUN pip install jupyter
