@@ -6,8 +6,7 @@ LABEL maintainer="TRIUMF capstone" \
 # ===============tools=============== # 
 # Run a system update to get it up to speed
 # RUN apt-get update && apt-get install less
-RUN apt-get update && apt-get install vim -y && apt-get install nano -y &&  apt-get install npm -y
-RUN npm install mdpdf -g
+RUN apt-get update && apt-get install vim -y && apt-get install nano -y
 
 # ===============Packages=============== # 
 # Install graph tool 
