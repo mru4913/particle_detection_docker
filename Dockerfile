@@ -54,6 +54,9 @@ RUN pip install catboost
 
 # Install snakemake 
 RUN pip install snakemake
+
+# Install Markdown2PDF
+RUN pip install Markdown2PDF
  
 # Install jupyter notebook 
 RUN pip install jupyter
