@@ -6,7 +6,8 @@ LABEL maintainer="TRIUMF capstone" \
 # ===============tools=============== # 
 # Run a system update to get it up to speed
 # RUN apt-get update && apt-get install less
-RUN apt-get update && apt-get install vim -y && apt-get install nano -y
+RUN apt-get update && apt-get install vim -y && apt-get install nano -y &&  apt-get install npm -y
+RUN npm install mdpdf -g
 
 # ===============Packages=============== # 
 # Install graph tool 
@@ -54,9 +55,6 @@ RUN pip install catboost
 
 # Install snakemake 
 RUN pip install snakemake
-
-# Install Markdown2PDF
-RUN pip install Markdown2PDF
  
 # Install jupyter notebook 
 RUN pip install jupyter
