@@ -54,6 +54,9 @@ RUN pip install catboost
 
 # Install snakemake 
 RUN pip install snakemake
+
+# Install pytest
+RUN pip install -U pytest
  
 # Install jupyter notebook 
 RUN pip install jupyter
