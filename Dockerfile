@@ -31,7 +31,7 @@ RUN conda install seaborn && \
     conda conda install -y scikit-learn && \
     conda clean -ya && \ 
     conda install -y -c conda-forge lightgbm && \
-    conda clean -ya && \
+    conda clean -ya
 
 # Install pytorch torchvision
 # RUN pip install torchvision
