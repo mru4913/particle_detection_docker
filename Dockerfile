@@ -5,7 +5,7 @@ LABEL maintainer="TRIUMF capstone" \
       
 # ===============tools=============== # 
 # Run a system update to get it up to speed
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils \
     vim \
     nano
 
@@ -19,6 +19,7 @@ RUN pip install matplotlib \
     pytest \
     jupyter 
 
+RUN conda update -n base -c defaults conda 
 RUN conda install seaborn && \
     conda clean -ya && \
     conda install -c conda-forge tensorflow && \
