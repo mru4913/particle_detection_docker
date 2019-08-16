@@ -19,6 +19,7 @@ RUN pip install matplotlib \
     pytest \
     jupyter 
 
+RUN conda update -n base -c defaults conda 
 RUN conda install seaborn && \
     conda clean -ya && \
     conda install -c conda-forge tensorflow && \
