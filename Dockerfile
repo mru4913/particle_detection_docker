@@ -19,17 +19,17 @@ RUN pip install matplotlib \
     pytest \
     jupyter 
 
-# RUN conda install seaborn && \
-#     conda clean -ya && \
-#     conda install -c conda-forge tensorflow && \
-#     conda install -y h5py=2.8.0 && \
-#     conda clean -ya && \
-#     conda install -c anaconda cudnn && \
-#     conda clean -ya && \ 
-#     conda install -y scikit-learn && \
-#     conda clean -ya && \ 
-#     conda install -y -c conda-forge lightgbm && \
-#     conda clean -ya
+RUN conda install seaborn && \
+    conda clean -ya && \
+    conda install -c conda-forge tensorflow && \
+    conda install -y h5py=2.8.0 && \
+    conda clean -ya && \
+    conda install -c anaconda cudnn && \
+    conda clean -ya && \ 
+    conda install -y scikit-learn && \
+    conda clean -ya && \ 
+    conda install -y -c conda-forge lightgbm && \
+    conda clean -ya
 
 # Install pytorch torchvision
 # RUN pip install torchvision
