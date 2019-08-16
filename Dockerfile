@@ -5,10 +5,11 @@ LABEL maintainer="TRIUMF capstone" \
       
 # ===============tools=============== # 
 # Run a system update to get it up to speed
-RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
-RUN apt-get install -y \
-    vim \
-    nano
+RUN apt-get update && apt-get install vim -y && apt-get install nano -y
+# RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
+# RUN apt-get install -y \
+#     vim \
+#     nano
 
 # ===============Packages=============== # 
 RUN pip install matplotlib \
@@ -20,20 +21,29 @@ RUN pip install matplotlib \
     pytest \
     jupyter 
 
-RUN conda update conda -y
-RUN conda install seaborn && \
-    conda clean -ya && \
-    conda install -c conda-forge tensorflow && \
-    conda install -y h5py=2.8.0 && \
-    conda clean -ya && \
-    conda install -c anaconda cudnn && \
-    conda clean -ya && \ 
-    conda install -y pandas && \
-    conda clean -ya && \
-    conda conda install -y scikit-learn && \
-    conda clean -ya && \ 
-    conda install -y -c conda-forge lightgbm && \
-    conda clean -ya
+RUN conda install -c conda-forge tensorflow
+RUN conda install -y h5py=2.8.0 \
+ && conda clean -ya
+RUN conda install -c anaconda cudnn  \
+ && conda clean -ya
+RUN conda install -y scikit-learn\
+ && conda clean -ya
+RUN conda install -y -c conda-forge lightgbm \
+&& conda clean -ya
+
+# RUN conda install seaborn && \
+#     conda clean -ya && \
+#     conda install -c conda-forge tensorflow && \
+#     conda install -y h5py=2.8.0 && \
+#     conda clean -ya && \
+#     conda install -c anaconda cudnn && \
+#     conda clean -ya && \ 
+#     conda install -y pandas && \
+#     conda clean -ya && \
+#     conda conda install -y scikit-learn && \
+#     conda clean -ya && \ 
+#     conda install -y -c conda-forge lightgbm && \
+#     conda clean -ya
 
 # Install pytorch torchvision
 # RUN pip install torchvision
