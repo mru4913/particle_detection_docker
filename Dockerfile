@@ -13,8 +13,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends apt-utils \
 RUN pip install matplotlib \
     torchvision \
     keras \
-    h5py-cache==1.0 \
-    torchnet==0.0.4 \ 
+    h5py-cache \
+    torchnet \ 
     snakemake \
     pytest \
     jupyter 
@@ -23,14 +23,15 @@ RUN conda update conda -y
 RUN conda install seaborn && \
     conda clean -ya && \
     conda install -c conda-forge tensorflow && \
-    conda install -y h5py=2.8.0 && \
+    conda install -y h5py && \
     conda clean -ya && \
     conda install -c anaconda cudnn && \
     conda clean -ya && \ 
     conda install -y scikit-learn && \
     conda clean -ya && \ 
     conda install -y -c conda-forge lightgbm && \
-    conda clean -ya
+    conda clean -ya && \
+    conda update --all
 
 # Install pytorch torchvision
 # RUN pip install torchvision
