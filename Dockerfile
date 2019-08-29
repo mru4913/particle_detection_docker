@@ -10,16 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends apt-utils \
     nano
 
 # ===============Packages=============== # 
-RUN pip install matplotlib \
-    torchvision \
-    keras \
-    h5py-cache \
-    torchnet \ 
-    snakemake \
-    pytest \
-    jupyter 
-
-RUN conda update conda -y  
+RUN conda update conda -y 
 RUN conda install seaborn && \
     conda clean -ya && \
     conda install -c conda-forge tensorflow && \
@@ -31,7 +22,17 @@ RUN conda install seaborn && \
     conda clean -ya && \ 
     conda install -y -c conda-forge lightgbm && \
     conda clean -ya && \
-    conda update --all
+    conda update --all -y
+    
+RUN pip install torchvision \
+    keras \
+    h5py-cache \
+    torchnet \ 
+    snakemake \
+    pytest \
+    jupyter
+   
+RUN pip install --upgrade notebook
 
 # Install pytorch torchvision
 # RUN pip install torchvision
