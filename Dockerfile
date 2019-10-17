@@ -30,6 +30,7 @@ RUN pip install torchvision \
     torchnet \ 
     snakemake \
     pytest \
+    lmfit \
     jupyter
    
 RUN pip install --upgrade notebook
