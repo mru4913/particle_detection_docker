@@ -12,14 +12,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends apt-utils \
 # ===============Packages=============== # 
 RUN conda update conda -y 
 RUN conda install seaborn && \
-    conda clean -ya && \
     conda install -c conda-forge tensorflow && \
     conda install -y h5py && \
-    conda clean -ya && \
-    conda install -c anaconda cudnn && \
-    conda clean -ya && \ 
-    conda install -y scikit-learn && \
-    conda clean -ya && \ 
+    conda install -c anaconda cudnn && \ 
+    conda install -y scikit-learn && \ 
     conda install -y -c conda-forge lightgbm && \
     conda clean -ya && \
     conda update --all -y
@@ -29,9 +25,9 @@ RUN pip install torchvision \
     keras \
     h5py-cache \
     torchnet \ 
-    snakemake \
     pytest \
     lmfit \
+    snakemake \     
     jupyter
    
 RUN pip install --upgrade notebook
