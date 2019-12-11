@@ -10,9 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends apt-utils \
 
 # ===============Packages=============== # 
 RUN conda update conda -y 
-RUN conda install seaborn && \
-    conda clean -ya && \
-    conda install -y h5py && \
+RUN conda install -y h5py && \
     conda clean -ya && \
     conda install -c anaconda cudnn && \
     conda clean -ya && \ 
