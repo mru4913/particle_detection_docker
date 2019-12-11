@@ -17,8 +17,7 @@ RUN conda install -y h5py && \
     conda install -y scikit-learn && \
     conda clean -ya && \ 
     conda install -y -c conda-forge lightgbm && \
-    conda clean -ya && \
-    conda update --all -y
+    conda clean -ya 
     
 RUN pip install torchvision \
     torchnet \ 
