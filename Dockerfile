@@ -1,7 +1,7 @@
 FROM pytorch/pytorch
 
-LABEL maintainer="TRIUMF NA62 group" \
-      description="NA62 particle identification machine learning runtime environement - base"
+LABEL maintainer="TRIUMF NA62 Group" \
+      description="NA62 machine learning runtime environement - base"
       
 # ===============tools=============== # 
 # Run a system update 
@@ -23,7 +23,6 @@ RUN conda install seaborn && \
     conda update --all -y
     
 RUN pip install torchvision \
-    h5py-cache \
     torchnet \ 
     snakemake \
     pytest \
