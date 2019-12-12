@@ -1,7 +1,7 @@
 FROM pytorch/pytorch
 
 LABEL maintainer="TRIUMF NA62 Group" \
-      description="NA62 machine learning runtime environement - base"
+      description="NA62 rare particle identification runtime environement - base"
       
 # ===============tools=============== # 
 # Run a system update 
@@ -11,12 +11,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends apt-utils \
 # ===============Packages=============== # 
 RUN conda update conda -y 
 RUN conda install -y h5py && \
-    conda clean -ya && \
     conda install -c anaconda cudnn && \
-    conda clean -ya && \ 
     conda install -y scikit-learn && \
-    conda clean -ya && \ 
     conda install -y -c conda-forge lightgbm && \
+    conda install -c conda-forge matplotlib && \
+    conda install -c anaconda seaborn && \
     conda clean -ya 
     
 RUN pip install torchvision \
