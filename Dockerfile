@@ -14,11 +14,11 @@ RUN conda install -y h5py && \
     conda install -c anaconda cudnn && \
     conda install -y scikit-learn && \
     conda install -y -c conda-forge lightgbm && \
-    conda install -c conda-forge matplotlib && \
     conda install -c anaconda seaborn && \
     conda clean -ya 
     
 RUN pip install torchvision \
+    matplotlib \
     torchnet \ 
     snakemake \
     pytest \
