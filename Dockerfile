@@ -19,7 +19,7 @@ RUN conda install -y h5py && \
     
 RUN pip install torchvision \
     matplotlib \
-    torchnet \ 
+    torchnet \
     snakemake \
     pytest \
     lmfit \
